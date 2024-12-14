@@ -1,0 +1,14 @@
+build/
+run/
+out/
+.gradle/
+output/
+bin/
+libs/
+.idea/
+src/generated/resources/.cache/
+
+*.iml
+.classpath
+*.DS_Store
+.project
