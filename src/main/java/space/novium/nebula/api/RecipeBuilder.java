@@ -3,7 +3,6 @@ package space.novium.nebula.api;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import space.novium.nebula.impl.Supernova;
 
 public class RecipeBuilder {
