@@ -32,6 +32,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
+import space.novium.nebula.init.NebulaCommon;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Nebula.MODID)
@@ -40,6 +41,8 @@ public class Nebula {
     public static final String MODID = "nebula";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+    
+    private NebulaCommon common;
     
     
     
@@ -59,11 +62,14 @@ public class Nebula {
     }
     
     private void commonSetup(final FMLCommonSetupEvent event) {
+        common = NebulaCommon.init();
+        common.start();
     }
     
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+    
     }
     
     public static ResourceLocation modResourceLocation(String path){
